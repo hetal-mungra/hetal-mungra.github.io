@@ -3,87 +3,171 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hetalben Mungra · Independent Software Engineer & IT Consultant</title>
-<meta name="description" content="Freelance software engineer and IT consultant based in India with 4+ years of experience. AI training data and model evaluation, backend development, DevOps and test automation for international clients.">
+<title>Hetalben Mungra · Software Engineer &amp; IT Consultant</title>
+<meta name="description" content="Hetalben Mungra is a freelance software engineer and IT consultant based in India with 4+ years of experience in Node.js, NestJS, Go, Python, cloud infrastructure and AI training data for international clients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0f1115;--card:#171a21;--text:#e6e8ec;--muted:#9aa3b2;--accent:#5eead4;--line:#262a33}
-  @media (prefers-color-scheme: light){:root{--bg:#f7f8fa;--card:#ffffff;--text:#15181e;--muted:#5b6474;--accent:#0f766e;--line:#e3e6ec}}
+  :root{
+    --bg:#0b0d12;--bg2:#10131a;--card:#151923;--line:#232938;
+    --text:#eef1f6;--muted:#98a2b3;
+    --a1:#7c5cff;--a2:#2dd4bf;
+    --grad:linear-gradient(135deg,var(--a1),var(--a2));
+  }
   *{box-sizing:border-box}
-  body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
-  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
-  header{padding:28px 0;border-bottom:1px solid var(--line)}
-  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-  .brand{font-weight:700;font-size:18px;color:var(--text)}
-  nav a{margin-left:18px;color:var(--muted);font-size:15px}
-  .hero{padding:64px 0 40px}
-  .hero h1{font-size:40px;line-height:1.15;margin:0 0 14px}
-  .hero p{font-size:18px;color:var(--muted);max-width:640px;margin:0 0 24px}
-  .btn{display:inline-block;padding:10px 18px;border:1px solid var(--accent);border-radius:8px;color:var(--accent);margin-right:10px}
-  section{padding:40px 0;border-top:1px solid var(--line)}
-  h2{font-size:22px;margin:0 0 20px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
-  .card h3{margin:0 0 8px;font-size:17px}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.65;overflow-x:hidden}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+  .blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;z-index:0;pointer-events:none}
+  .b1{width:520px;height:520px;background:var(--a1);top:-180px;right:-120px}
+  .b2{width:420px;height:420px;background:var(--a2);top:260px;left:-200px;opacity:.22}
+  header{position:sticky;top:0;z-index:10;backdrop-filter:blur(14px);background:rgba(11,13,18,.72);border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:700}
+  .logo i{width:32px;height:32px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-style:normal;font-size:13px;color:#0b0d12;font-weight:800}
+  nav a{margin-left:22px;color:var(--muted);font-size:14px;font-weight:500}
+  nav a:hover{color:var(--text)}
+  .hero{position:relative;padding:96px 0 64px}
+  .hero .wrap{position:relative;z-index:1}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;color:var(--a2);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:18px}
+  .eyebrow::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--a2);box-shadow:0 0 0 4px rgba(45,212,191,.2)}
+  h1{font-size:clamp(36px,6vw,60px);line-height:1.08;margin:0 0 20px;font-weight:800;letter-spacing:-.02em}
+  h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{font-size:19px;color:var(--muted);max-width:640px;margin:0 0 32px}
+  .btns{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{padding:12px 22px;border-radius:10px;font-weight:600;font-size:15px;border:1px solid var(--line);background:var(--card);transition:.2s}
+  .btn:hover{transform:translateY(-2px);border-color:var(--a1)}
+  .btn.primary{background:var(--grad);color:#0b0d12;border:0}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:56px}
+  .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .stat b{display:block;font-size:28px;font-weight:800;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat span{font-size:13px;color:var(--muted)}
+  section{padding:72px 0;position:relative}
+  .sec-title{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--a2);font-weight:700;margin:0 0 10px}
+  h2{font-size:32px;margin:0 0 36px;font-weight:800;letter-spacing:-.01em}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;transition:.2s;position:relative;overflow:hidden}
+  .card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--grad);opacity:0;transition:.2s}
+  .card:hover{transform:translateY(-4px);border-color:#2f3750}
+  .card:hover::before{opacity:1}
+  .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;margin-bottom:16px;font-size:20px;background:rgba(124,92,255,.14)}
+  .card h3{margin:0 0 10px;font-size:18px}
   .card p{margin:0;color:var(--muted);font-size:15px}
-  ul.work{list-style:none;padding:0;margin:0}
-  ul.work li{padding:16px 0;border-bottom:1px solid var(--line)}
-  ul.work li:last-child{border-bottom:0}
-  ul.work strong{display:block;margin-bottom:4px}
-  ul.work span{color:var(--muted);font-size:15px}
-  .tags{display:flex;flex-wrap:wrap;gap:8px}
-  .tags span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;color:var(--muted)}
-  footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+  .card ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+  .tl{position:relative;padding-left:28px}
+  .tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .job{position:relative;margin-bottom:34px}
+  .job::before{content:"";position:absolute;left:-26px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--grad);box-shadow:0 0 0 4px var(--bg)}
+  .job .when{font-size:13px;color:var(--a2);font-weight:600;margin-bottom:4px}
+  .job h3{margin:0 0 4px;font-size:19px}
+  .job .where{color:var(--muted);font-size:14px;margin-bottom:10px}
+  .job ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+  .job li{margin-bottom:5px}
+  .stack{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+  .stack h4{margin:0 0 12px;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chips span{padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:14px;font-weight:500}
+  .chips span.hot{border:1px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,var(--grad) border-box}
+  .contact{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:40px;display:grid;grid-template-columns:1.3fr 1fr;gap:30px;align-items:center}
+  .contact p{color:var(--muted);margin:0 0 18px}
+  .contact .links a{display:flex;align-items:center;gap:12px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;margin-bottom:10px;background:var(--bg2);transition:.2s}
+  .contact .links a:hover{border-color:var(--a1)}
+  .contact .links small{display:block;color:var(--muted);font-size:12px}
+  footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line);text-align:center}
+  @media (max-width:760px){.contact{grid-template-columns:1fr;padding:28px}nav a{margin-left:14px}.hero{padding:64px 0 48px}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
-  <div class="brand">Hetalben Mungra</div>
-  <nav><a href="#services">Services</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+  <a class="logo" href="#"><i>HM</i> Hetalben Mungra</a>
+  <nav><a href="#services">Services</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#contact">Contact</a></nav>
 </div></header>
 
-<main class="wrap">
-  <div class="hero">
-    <h1>Independent software engineer and IT consultant</h1>
-    <p>4+ years of experience working remotely with clients in the US and other countries on AI training data and model evaluation, backend development, DevOps and test automation. Based in India, available on a contract or project basis.</p>
-    <a class="btn" href="#contact">Get in touch</a>
-    <a class="btn" href="https://github.com/hetal-mungra" target="_blank" rel="noopener">GitHub</a>
+<section class="hero">
+  <div class="blob b1"></div><div class="blob b2"></div>
+  <div class="wrap">
+    <div class="eyebrow">Available for remote work</div>
+    <h1>Software engineer &amp; IT consultant building <span>reliable backend systems</span> and AI training data</h1>
+    <p class="lead">I am Hetalben Mungra, an independent engineer based in India with 4+ years of experience. I help US and international clients ship Node.js, NestJS, Go and Python backends, run them on solid cloud infrastructure, and build the evaluation data that trains modern AI coding systems.</p>
+    <div class="btns">
+      <a class="btn primary" href="#contact">Work with me</a>
+      <a class="btn" href="https://github.com/hetal-mungra" target="_blank" rel="noopener">GitHub profile</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>4+</b><span>Years of experience</span></div>
+      <div class="stat"><b>100%</b><span>Remote delivery</span></div>
+      <div class="stat"><b>USD</b><span>Invoicing for international clients</span></div>
+      <div class="stat"><b>3</b><span>Service areas</span></div>
+    </div>
   </div>
+</section>
 
-  <section id="services">
-    <h2>Services</h2>
-    <div class="grid">
-      <div class="card"><h3>AI training and evaluation</h3><p>Design of coding tasks, reproducible test environments, hidden test suites and automated graders used to train and benchmark AI coding systems.</p></div>
-      <div class="card"><h3>Software development</h3><p>Backend services, command-line tools, data pipelines and test automation in Python, Go and shell. Debugging and reverse engineering of existing systems.</p></div>
-      <div class="card"><h3>IT consulting</h3><p>Technical reviews, Linux and cloud VM setup, CI pipelines, containerisation and developer tooling for small teams.</p></div>
+<section id="services"><div class="wrap">
+  <p class="sec-title">What I do</p>
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><div class="ico">&#9881;&#65039;</div><h3>Backend development</h3><p>Production APIs and services with Node.js, NestJS, Express and Go, backed by PostgreSQL, MongoDB and Redis.</p><ul><li>REST and GraphQL API design</li><li>Authentication, payments and third-party integrations</li><li>Testing, documentation and handover</li></ul></div>
+    <div class="card"><div class="ico">&#129302;</div><h3>AI training data &amp; evaluation</h3><p>Realistic coding tasks, test environments and automated graders used to train and benchmark AI coding systems.</p><ul><li>Reproducible Docker environments</li><li>Hidden test suites and reference solutions</li><li>Quality iteration on reviewer feedback</li></ul></div>
+    <div class="card"><div class="ico">&#9729;&#65039;</div><h3>IT consulting &amp; DevOps</h3><p>Infrastructure that small teams can actually run: Linux servers, cloud VMs, containers and CI pipelines.</p><ul><li>AWS and VPS set-up, monitoring and backups</li><li>Docker, GitHub Actions, deployment pipelines</li><li>Technical reviews and developer tooling</li></ul></div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <p class="sec-title">Track record</p>
+  <h2>Experience</h2>
+  <div class="tl">
+    <div class="job">
+      <div class="when">2023 &ndash; Present</div>
+      <h3>AI Training Data &amp; Evaluation Contributor</h3>
+      <div class="where">Freelance &middot; Remote &middot; US AI research platform</div>
+      <ul>
+        <li>Author agentic coding tasks used to train and evaluate large language models on real software engineering work.</li>
+        <li>Build Docker-based task environments with reference solutions, hidden tests and automated graders.</li>
+        <li>Cover backend bugs, data pipelines, systems programming and infrastructure scenarios.</li>
+      </ul>
     </div>
-  </section>
-
-  <section id="work">
-    <h2>Selected work</h2>
-    <ul class="work">
-      <li><strong>AI training data and evaluation</strong><span>Authoring software engineering tasks, test environments and automated graders used to train and benchmark AI coding systems, with reproducible Docker set-ups and hidden test suites.</span></li>
-      <li><strong>Backend and automation development</strong><span>Services, command-line tools, data pipelines and test automation in Python and shell for remote clients, delivered with documentation and handover.</span></li>
-      <li><strong>IT consulting and infrastructure</strong><span>Linux server and cloud VM set-up, containerisation, CI pipelines and developer tooling for small teams.</span></li>
-    </ul>
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="tags">
-      <span>Python</span><span>Bash</span><span>Linux</span><span>Docker</span><span>Git</span><span>CI/CD</span><span>Test automation</span><span>Backend development</span><span>AI evaluation</span><span>LLM benchmarking</span><span>Data pipelines</span><span>Cloud VMs</span><span>Technical consulting</span>
+    <div class="job">
+      <div class="when">2021 &ndash; Present</div>
+      <h3>Freelance Software Engineer &amp; IT Consultant</h3>
+      <div class="where">Self-employed &middot; Remote &middot; International clients</div>
+      <ul>
+        <li>Design and build backend services and APIs in Node.js, NestJS and Go for startups and small businesses.</li>
+        <li>Write automation, data pipelines and internal tools in Python and shell.</li>
+        <li>Set up and maintain Linux servers, cloud deployments, Docker and CI/CD for client teams.</li>
+        <li>Own the full engagement: scoping, estimates, delivery, documentation and support.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</div></section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:mungrahetalben@gmail.com">mungrahetalben@gmail.com</a><br>
-    GitHub: <a href="https://github.com/hetal-mungra" target="_blank" rel="noopener">github.com/hetal-mungra</a></p>
-    <p style="color:var(--muted)">Engagements are delivered remotely and invoiced in USD. Typical work: software development, AI evaluation and technical consulting.</p>
-  </section>
-</main>
+<section id="stack"><div class="wrap">
+  <p class="sec-title">Tools I use daily</p>
+  <h2>Tech stack</h2>
+  <div class="stack">
+    <div><h4>Languages</h4><div class="chips"><span class="hot">JavaScript</span><span class="hot">TypeScript</span><span class="hot">Go</span><span class="hot">Python</span><span>Bash</span><span>SQL</span></div></div>
+    <div><h4>Backend</h4><div class="chips"><span class="hot">Node.js</span><span class="hot">NestJS</span><span>Express</span><span>Gin</span><span>REST</span><span>GraphQL</span><span>WebSockets</span></div></div>
+    <div><h4>Data</h4><div class="chips"><span>PostgreSQL</span><span>MongoDB</span><span>Redis</span><span>Prisma</span><span>TypeORM</span></div></div>
+    <div><h4>Cloud &amp; DevOps</h4><div class="chips"><span>Docker</span><span>Linux</span><span>AWS</span><span>GitHub Actions</span><span>Nginx</span><span>CI/CD</span></div></div>
+    <div><h4>AI &amp; quality</h4><div class="chips"><span>AI evaluation</span><span>LLM benchmarking</span><span>Test automation</span><span>Jest</span><span>Pytest</span></div></div>
+  </div>
+</div></section>
 
-<footer><div class="wrap">© <span id="y"></span> Hetalben Mungra · Independent software engineer, India</div></footer>
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <div>
+      <p class="sec-title">Let&rsquo;s talk</p>
+      <h2 style="margin-bottom:12px">Have a project in mind?</h2>
+      <p>I take on contract and project work with remote teams. Tell me what you are building and I will reply with how I can help and a clear estimate.</p>
+    </div>
+    <div class="links">
+      <a href="mailto:mungrahetalben@gmail.com">&#9993;&#65039; <div>mungrahetalben@gmail.com<small>Email, replies within a day</small></div></a>
+      <a href="https://github.com/hetal-mungra" target="_blank" rel="noopener">&#128025; <div>github.com/hetal-mungra<small>Code and projects</small></div></a>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">&copy; <span id="y"></span> Hetalben Mungra &middot; Independent software engineer &amp; IT consultant &middot; India</div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
