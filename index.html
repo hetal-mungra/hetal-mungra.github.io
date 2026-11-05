@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hetalben Mungra · Independent Software Engineer & IT Consultant</title>
+<meta name="description" content="Freelance software engineer and IT consultant based in India with 4+ years of experience. AI training data and model evaluation, backend development, DevOps and test automation for international clients.">
+<style>
+  :root{--bg:#0f1115;--card:#171a21;--text:#e6e8ec;--muted:#9aa3b2;--accent:#5eead4;--line:#262a33}
+  @media (prefers-color-scheme: light){:root{--bg:#f7f8fa;--card:#ffffff;--text:#15181e;--muted:#5b6474;--accent:#0f766e;--line:#e3e6ec}}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text)}
+  a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+  .wrap{max-width:880px;margin:0 auto;padding:0 20px}
+  header{padding:28px 0;border-bottom:1px solid var(--line)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+  .brand{font-weight:700;font-size:18px;color:var(--text)}
+  nav a{margin-left:18px;color:var(--muted);font-size:15px}
+  .hero{padding:64px 0 40px}
+  .hero h1{font-size:40px;line-height:1.15;margin:0 0 14px}
+  .hero p{font-size:18px;color:var(--muted);max-width:640px;margin:0 0 24px}
+  .btn{display:inline-block;padding:10px 18px;border:1px solid var(--accent);border-radius:8px;color:var(--accent);margin-right:10px}
+  section{padding:40px 0;border-top:1px solid var(--line)}
+  h2{font-size:22px;margin:0 0 20px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .card h3{margin:0 0 8px;font-size:17px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  ul.work{list-style:none;padding:0;margin:0}
+  ul.work li{padding:16px 0;border-bottom:1px solid var(--line)}
+  ul.work li:last-child{border-bottom:0}
+  ul.work strong{display:block;margin-bottom:4px}
+  ul.work span{color:var(--muted);font-size:15px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tags span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:14px;color:var(--muted)}
+  footer{padding:32px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="brand">Hetalben Mungra</div>
+  <nav><a href="#services">Services</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <h1>Independent software engineer and IT consultant</h1>
+    <p>4+ years of experience working remotely with clients in the US and other countries on AI training data and model evaluation, backend development, DevOps and test automation. Based in India, available on a contract or project basis.</p>
+    <a class="btn" href="#contact">Get in touch</a>
+    <a class="btn" href="https://github.com/hetal-mungra" target="_blank" rel="noopener">GitHub</a>
+  </div>
+
+  <section id="services">
+    <h2>Services</h2>
+    <div class="grid">
+      <div class="card"><h3>AI training and evaluation</h3><p>Design of coding tasks, reproducible test environments, hidden test suites and automated graders used to train and benchmark AI coding systems.</p></div>
+      <div class="card"><h3>Software development</h3><p>Backend services, command-line tools, data pipelines and test automation in Python, Go and shell. Debugging and reverse engineering of existing systems.</p></div>
+      <div class="card"><h3>IT consulting</h3><p>Technical reviews, Linux and cloud VM setup, CI pipelines, containerisation and developer tooling for small teams.</p></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <h2>Selected work</h2>
+    <ul class="work">
+      <li><strong>AI training data and evaluation</strong><span>Authoring software engineering tasks, test environments and automated graders used to train and benchmark AI coding systems, with reproducible Docker set-ups and hidden test suites.</span></li>
+      <li><strong>Backend and automation development</strong><span>Services, command-line tools, data pipelines and test automation in Python and shell for remote clients, delivered with documentation and handover.</span></li>
+      <li><strong>IT consulting and infrastructure</strong><span>Linux server and cloud VM set-up, containerisation, CI pipelines and developer tooling for small teams.</span></li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="tags">
+      <span>Python</span><span>Bash</span><span>Linux</span><span>Docker</span><span>Git</span><span>CI/CD</span><span>Test automation</span><span>Backend development</span><span>AI evaluation</span><span>LLM benchmarking</span><span>Data pipelines</span><span>Cloud VMs</span><span>Technical consulting</span>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:mungrahetalben@gmail.com">mungrahetalben@gmail.com</a><br>
+    GitHub: <a href="https://github.com/hetal-mungra" target="_blank" rel="noopener">github.com/hetal-mungra</a></p>
+    <p style="color:var(--muted)">Engagements are delivered remotely and invoiced in USD. Typical work: software development, AI evaluation and technical consulting.</p>
+  </section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Hetalben Mungra · Independent software engineer, India</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
